@@ -2,7 +2,7 @@ import {CORE_CONCEPTS, EXAMPLES} from "./data";
 import Header from "./components/Header/Header";
 import CoreConcept from "./components/CoreConcept/CoreConcept";
 import TabButton from "./components/TabButton";
-import {Fragment, useState} from "react";
+import {useState} from "react";
 
 function App() {
 
@@ -26,7 +26,7 @@ function App() {
     }
 
     return (
-        <Fragment>
+        <>
             <Header></Header>
             <main>
                 <section id="core-concepts">
@@ -56,7 +56,7 @@ function App() {
                     { tabContent }
                 </section>
             </main>
-        </Fragment>
+        </>
     );
 }
 
