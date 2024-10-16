@@ -29,12 +29,12 @@ export default function Example() {
         <Section  title="Examples" id="examples">
             <menu>
                 <TabButton isSelected={selectedTopic === 'components'}
-                           handleSelect={() => handleSelect("components")}>Components</TabButton>
-                <TabButton isSelected={selectedTopic === 'jsx'} handleSelect={() => handleSelect("jsx")}>JSX</TabButton>
+                           onClick={() => handleSelect("components")}>Components</TabButton>
+                <TabButton isSelected={selectedTopic === 'jsx'} onClick={() => handleSelect("jsx")}>JSX</TabButton>
                 <TabButton isSelected={selectedTopic === 'props'}
-                           handleSelect={() => handleSelect("props")}>Props</TabButton>
+                           onClick={() => handleSelect("props")}>Props</TabButton>
                 <TabButton isSelected={selectedTopic === 'state'}
-                           handleSelect={() => handleSelect("state")}>State</TabButton>
+                           onClick={() => handleSelect("state")}>State</TabButton>
             </menu>
             {tabContent}
         </Section>
