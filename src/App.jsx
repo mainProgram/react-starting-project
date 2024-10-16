@@ -2,7 +2,7 @@ import {CORE_CONCEPTS, EXAMPLES} from "./data";
 import Header from "./components/Header/Header";
 import CoreConcept from "./components/CoreConcept/CoreConcept";
 import TabButton from "./components/TabButton";
-import {useState} from "react";
+import {Fragment, useState} from "react";
 
 function App() {
 
@@ -26,7 +26,7 @@ function App() {
     }
 
     return (
-        <div>
+        <Fragment>
             <Header></Header>
             <main>
                 <section id="core-concepts">
@@ -45,19 +45,19 @@ function App() {
                     {/*<CoreConcept {...CORE_CONCEPTS[3]}></CoreConcept>*/}
                 </ul>
             </section>
-            <section id="examples">
-                <h2>Examples</h2>
-                <menu>
-                    <TabButton isSelected={selectedTopic === 'components'} handleSelect={() => handleSelect("components")}>Components</TabButton>
-                    <TabButton isSelected={selectedTopic === 'jsx'} handleSelect={() => handleSelect("jsx")}>JSX</TabButton>
-                    <TabButton isSelected={selectedTopic === 'props'} handleSelect={() => handleSelect("props")}>Props</TabButton>
-                    <TabButton isSelected={selectedTopic === 'state'} handleSelect={() => handleSelect("state")}>State</TabButton>
-                </menu>
-                { tabContent }
-            </section>
-        </main>
-    </div>
-  );
+                <section id="examples">
+                    <h2>Examples</h2>
+                    <menu>
+                        <TabButton isSelected={selectedTopic === 'components'} handleSelect={() => handleSelect("components")}>Components</TabButton>
+                        <TabButton isSelected={selectedTopic === 'jsx'} handleSelect={() => handleSelect("jsx")}>JSX</TabButton>
+                        <TabButton isSelected={selectedTopic === 'props'} handleSelect={() => handleSelect("props")}>Props</TabButton>
+                        <TabButton isSelected={selectedTopic === 'state'} handleSelect={() => handleSelect("state")}>State</TabButton>
+                    </menu>
+                    { tabContent }
+                </section>
+            </main>
+        </Fragment>
+    );
 }
 
 export default App;
